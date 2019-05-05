@@ -8,7 +8,6 @@ public class Parser {
 
     Var calcOperation (String operand1, String operation, String operand2 )
 
-
     Var calc(String expression) {
         String [] operand = expression.split(Patterns.OPERATION);
         Var one = Var.createVar(operand[0]);

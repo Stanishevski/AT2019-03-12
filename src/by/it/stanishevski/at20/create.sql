@@ -51,8 +51,6 @@ CREATE TABLE IF NOT EXISTS `stanishevski`.`variable` (
   `user_id` INT(11) NOT NULL,
   `category_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_variable_user_idx` (`user_id` ASC) VISIBLE,
-  INDEX `fk_variable_category1_idx` (`category_id` ASC) VISIBLE,
   CONSTRAINT `fk_variable_category1`
     FOREIGN KEY (`category_id`)
     REFERENCES `stanishevski`.`category` (`id`),
@@ -67,3 +65,37 @@ DEFAULT CHARACTER SET = utf8;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `stanishevski`.`category`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `stanishevski`;
+INSERT INTO `stanishevski`.`category` (`id`, `name`) VALUES (1, 'SCALAR');
+INSERT INTO `stanishevski`.`category` (`id`, `name`) VALUES (2, 'VECTOR');
+INSERT INTO `stanishevski`.`category` (`id`, `name`) VALUES (3, 'MATRIX');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `stanishevski`.`user`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `stanishevski`;
+INSERT INTO `stanishevski`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (1, 'default', 'default@mail.com', 'qwerty', '2019-04-25');
+INSERT INTO `stanishevski`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (2, 'user', 'user@gmail.com', 'asdfgh', '2019-04-25');
+INSERT INTO `stanishevski`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (3, 'admin', 'admin@domain.com', 'zxcvbn', '2019-04-25');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `stanishevski`.`variable`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `stanishevski`;
+INSERT INTO `stanishevski`.`variable` (`id`, `name`, `text`, `user_id`, `category_id`) VALUES (1, 'A', '111', 1, 1);
+
+COMMIT;
+
