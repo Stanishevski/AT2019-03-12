@@ -1,0 +1,1 @@
+INSERT INTO stanishevski.user (id, username, email, password, create_time) VALUES (user, 'goga', 'luzer@open.by', 'qazwsx', '2019-05-05');

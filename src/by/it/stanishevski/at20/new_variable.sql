@@ -1,0 +1,1 @@
+insert into stanishevski.variable (id, name, text, user_id, category_id ) values (2, 'A', 'zzz', 1, 1)
