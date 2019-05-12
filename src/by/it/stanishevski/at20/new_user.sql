@@ -1,1 +1,1 @@
-INSERT INTO stanishevski.user (id, username, email, password, create_time) VALUES (user, 'goga', 'luzer@open.by', 'qazwsx', '2019-05-05');
+INSERT INTO `stanishevski`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (15, 'user', 'Pipsik@oil.dom', 'zzyyzz', '2019-04-25');
