@@ -9,7 +9,7 @@ public class ConsoleRunner {
 		Printer printer = new Printer();
 		Scanner scanner = new Scanner(System.in);
 		Var.loadFromFile();
-		for (; ; ) {
+		for (; ; ) {  // бесконечный цикл break внутри
 			String expression = scanner.nextLine();
 			if (expression.equals("end")) {
 				Var.saveToFile();

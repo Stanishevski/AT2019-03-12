@@ -1,6 +1,5 @@
 package by.it.tsyhanova.calc;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -10,7 +9,7 @@ public class ConsoleRunner {
 
     public static void main(String[] args) {
         String filename=System.getProperty("user.dir")+
-                "/src/by/it/tsyhanova/calc/vars.txt";
+                "/src/by/it/tsyhanova/vars.txt";
 
 
         Parser parser=new Parser();

@@ -55,12 +55,15 @@ import java.util.Arrays;
     public Var add (Var other) throws  CalcException {
         if (other instanceof Scalar) {
             double[] res = Arrays.copyOf(value, value.length);
+
             for (int i = 0; i < res.length; i++) {
                 res[i] = res[i] + ((Scalar) other).value;
             }
             return new Vector(res);
         } else if (other instanceof Vector) {
             double[] res = Arrays.copyOf(value, value.length);
+            if (res.length!=((Vector) other).value.length)
+                throw new CalcException("не совпадает размер");
             for (int i = 0; i < res.length; i++) {
                 res[i] = res[i] + ((Vector) other).value[i];
             }
@@ -79,6 +82,8 @@ import java.util.Arrays;
             return new Vector(res);
         } else if (other instanceof Vector) {
             double[] res = Arrays.copyOf(value, value.length);
+            if (res.length!=((Vector) other).value.length)
+                throw new CalcException("не совпадает размер");
             for (int i = 0; i < res.length; i++) {
                 res[i] = res[i] - ((Vector) other).value[i];
             }

@@ -1,0 +1,134 @@
+Console Output
+Started by user tatsiana tsyhanova
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\TaskA
+No credentials specified
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe config remote.origin.url https://github.com/TatsianaTsyhanova/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/TatsianaTsyhanova/AT2019-03-12.git
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe --version # timeout=10
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe fetch --tags --progress https://github.com/TatsianaTsyhanova/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision f4230e466b3e03c1d4f9d83eb0b2882e7cd72b50 (refs/remotes/origin/master)
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe config core.sparsecheckout # timeout=10
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe checkout -f f4230e466b3e03c1d4f9d83eb0b2882e7cd72b50
+Commit message: "Maven complete with pom )))"
+ > D:\QualityAssuarance\ProgrammesEquipment\PortableGit\bin\git.exe rev-list --no-walk f4230e466b3e03c1d4f9d83eb0b2882e7cd72b50 # timeout=10
+[TaskA] $ cmd.exe /C "D:\QualityAssuarance\ProgrammesEquipment\apache-maven-3.6.1\bin\mvn.cmd -f '"C:\Program Files (x86)\Jenkins\workspace\TaskA/projects/tsyhanova/calculator/pom.xml"' test && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< by.it.tsyhanova:calculator >---------------------
+[INFO] Building calculator 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ calculator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\TaskA\projects\tsyhanova\calculator\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ calculator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ calculator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\TaskA\projects\tsyhanova\calculator\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ calculator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ calculator ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running by.it.tsyhanova.ParserTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s - in by.it.tsyhanova.ParserTest
+[INFO] Running by.it.tsyhanova.ScalarCreateTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in by.it.tsyhanova.ScalarCreateTest
+[INFO] Running by.it.tsyhanova.ScalarDivTest
+passed 2/2 = 1.0
+passed 2/8 = 0.25
+passed 0/1 = 0.0
+passed A=10/5 = 2.0
+passed 200/100 = 2.0
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in by.it.tsyhanova.ScalarDivTest
+[INFO] Running by.it.tsyhanova.ScalarEvaluateTest
+passed 2+2*2 = 6.0
+passed 2+2-8 = -4.0
+passed 2+2/2 = 3.0
+passed A=3+3*3 = 12.0
+passed 100+200 = 300.0
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 s - in by.it.tsyhanova.ScalarEvaluateTest
+[INFO] Running by.it.tsyhanova.ScalarExceptionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in by.it.tsyhanova.ScalarExceptionTest
+[INFO] Running by.it.tsyhanova.ScalarMulTest
+passed 2*2 = 4.0
+passed 2*8 = 16.0
+passed 0*0 = 0.0
+passed A=0*10 = 0.0
+passed 200*100 = 20000.0
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in by.it.tsyhanova.ScalarMulTest
+[INFO] Running by.it.tsyhanova.ScalarSubTest
+passed 2-2 = 0.0
+passed 2-8 = -6.0
+passed 0-0 = 0.0
+passed A=0-10 = -10.0
+passed 200-100 = 100.0
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in by.it.tsyhanova.ScalarSubTest
+[INFO] Running by.it.tsyhanova.ScalarSumTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in by.it.tsyhanova.ScalarSumTest
+[INFO] Running by.it.tsyhanova.VectorCreateTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in by.it.tsyhanova.VectorCreateTest
+[INFO] Running by.it.tsyhanova.VectorDivTest
+by.it.tsyhanova.Parser@7382f612
+passed {3.2,3.5,6.4}/2 = {1.6, 1.75, 3.2}
+by.it.tsyhanova.Parser@1055e4af
+passed {6.7,1.5}/0.3 = {22.333333333333336, 5.0}
+by.it.tsyhanova.Parser@3caeaf62
+passed {1.2,5.5}/10 = {0.12, 0.55}
+by.it.tsyhanova.Parser@e6ea0c6
+passed A={2.3}/2 = {1.15}
+by.it.tsyhanova.Parser@6a38e57f
+passed {300}/300 = {1.0}
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in by.it.tsyhanova.VectorDivTest
+[INFO] Running by.it.tsyhanova.VectorEvaluateTest
+passed {2.0,3.5}+2*3 = {8.0, 9.5}
+passed 10-6/2+{5.0} = {12.0}
+passed 2+3*{2.0,0.0} = {8.0, 2.0}
+passed A={2.0,1.5}+{3.5,6.4}*2 = {9.0, 14.3}
+passed {5.5,6.6}-{5.0,6.0}+100 = {100.5, 100.6}
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in by.it.tsyhanova.VectorEvaluateTest
+[INFO] Running by.it.tsyhanova.VectorMulTest
+passed {3.2,3.5,6.4}*2 = {6.4, 7.0, 12.8}
+passed {6.7,1.0}*0.3 = {2.01, 0.3}
+passed 3*{1.1,5.5} = {3.3, 16.5}
+passed A={2.3}*2 = {4.6}
+passed 0*{300} = {0.0}
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in by.it.tsyhanova.VectorMulTest
+[INFO] Running by.it.tsyhanova.VectorSubTest
+passed {3.2,3.5,6.4}-2 = {1.2, 1.5, 4.4}
+passed {6.7,1.0}-0.3 = {6.4, 0.7}
+passed {1.1,5.5}-3 = {-1.9, 2.5}
+passed A={2.3}-2 = {0.3}
+passed {300}-0 = {300.0}
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in by.it.tsyhanova.VectorSubTest
+[INFO] Running by.it.tsyhanova.VectorSumTest
+passed {2.2,3.5,6.4}+2 = {4.2, 5.5, 8.4}
+passed {6.7,1.0}+0.3 = {7.0, 1.3}
+passed 3.5+{1.1,5.5} = {4.6, 9.0}
+passed A={2.3}+2 = {4.3}
+passed {300}+0 = {300.0}
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in by.it.tsyhanova.VectorSumTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.311 s
+[INFO] Finished at: 2019-04-27T17:04:52+03:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS

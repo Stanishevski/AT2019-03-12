@@ -59,9 +59,13 @@ public class Test_at13_for_calc {
     @Test
     public void calcMulScalar() throws CalcException {
         Parser parser = new Parser();
-        String expression = "A = 88.3*6.3", control = "556.29";
+        String expression = "A = 88.35855*6.3", control = "556.65";
 
-        Assert.assertEquals(parser.calc(expression).toString(),control);
+        double value = Double.parseDouble(parser.calc(expression).toString());
+        double expected = Double.parseDouble(control);
+        System.out.println(value);
+        System.out.println(expected);
+        Assert.assertEquals(value, expected, 1e-2);
     }
 
     @Test
@@ -132,6 +136,8 @@ public class Test_at13_for_calc {
         String expression = "A = {{1,2.0,3},{4,5,6}}*{{7,-72},{60,5},{7,8}}", control = "{{148.0, -38.0}, {370.0, -215.0}}";
 
         Assert.assertEquals(parser.calc(expression).toString(),control);
+
+
 
     }
     @Test

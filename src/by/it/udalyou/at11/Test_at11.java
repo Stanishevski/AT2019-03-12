@@ -16,7 +16,7 @@ import static org.junit.Assert.fail;
 //поставьте курсор на следующую строку и нажмите Ctrl+Shift+F10
 public class Test_at11 {
 
-    @Test(timeout = 1500)
+    @Test(timeout = 5000)
     public void testTaskA() throws Exception {
         Test_at11 run = run("");
         StringBuilder sb = new StringBuilder();
@@ -91,7 +91,7 @@ public class Test_at11 {
     }
 
     static String dir(Class cl) {
-        return System.getProperty("user.dir") + "/src/" + cl.getName().replace(cl.getSimpleName(), "").replace("", "/");
+        return System.getProperty("user.dir") + "/src/" + cl.getName().replace(cl.getSimpleName(), "").replace('.', '/');
     }
 
     /*

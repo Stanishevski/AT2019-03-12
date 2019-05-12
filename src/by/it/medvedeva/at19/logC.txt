@@ -1,0 +1,8 @@
+Started by upstream project "TaskB" build number 6
+originally caused by:
+ Started by upstream project "TaskA" build number 10
+ originally caused by:
+  Запущен по таймеру
+Running as SYSTEM
+Building in workspace C:\Users\Anna\.jenkins\workspace\TaskC
+Finished: SUCCESS

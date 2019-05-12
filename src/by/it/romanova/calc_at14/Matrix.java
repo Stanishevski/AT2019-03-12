@@ -15,14 +15,10 @@ class Matrix extends Var {
         }
     }
 
-    Matrix(Matrix matrix){
-        this.arr = matrix.arr;
-    }
-
     Matrix(String strMatrix){
         StringBuilder stringBuilder = new StringBuilder(strMatrix);
-        Pattern arrayPattern = Pattern.compile("\\{[- 0-9.,]+\\}");
-        Pattern commas = Pattern.compile("\\},\\s?\\{");
+        Pattern arrayPattern = Pattern.compile("\\{[- 0-9.,]+}");
+        Pattern commas = Pattern.compile("},\\s?\\{");
         Matcher rows = arrayPattern.matcher(stringBuilder);
         Matcher count = commas.matcher(stringBuilder);
 

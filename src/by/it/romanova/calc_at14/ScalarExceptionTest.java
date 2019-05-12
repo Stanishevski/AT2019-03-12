@@ -28,10 +28,10 @@ public class ScalarExceptionTest {
     public static List<String> parameters(){
         List<String> strings = Arrays.asList(new String[]{
                 "A=2/0",
-                "B=A*3",
+                "B=-6/0",
                 "B1=0/0",
                 "B2=jjj",
-                "B3=B2*0"
+                "B3=o"
         });
         return strings;
     }

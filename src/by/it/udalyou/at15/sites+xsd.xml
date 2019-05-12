@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sites xmlns="http://bean.at15.udalyou.it.by"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://bean.at15.udalyou.it.by sites.xsd
+http://bean.at15.udalyou.it.by ">
+    <site url="http://it.by">
+        <pages>
+            <page title="Main page">
+                <uri>/index</uri>
+                <elements>
+                    <typeElement name="head">
+                        head for main
+                    </typeElement>
+                    <typeElement name="body">
+                        text for body
+                    </typeElement>
+                </elements>
+            </page>
+            <page title="Login page">
+                <uri>/login</uri>
+                <elements>
+                    <typeElement name="head">
+                        head for main
+                    </typeElement>
+                    <typeElement name="form">
+                        form login
+                    </typeElement>
+                </elements>
+            </page>
+        </pages>
+    </site>
+    <site url="http://ya.ru">
+        <pages>
+            <page title="Index page">
+                <uri>/index</uri>
+                <elements>
+                    <typeElement name="head">
+                        Search yandex
+                    </typeElement>
+                    <typeElement name="form">
+                        search form
+                    </typeElement>
+                </elements>
+            </page>
+            <page title="Search result page">
+                <uri>/result</uri>
+                <elements>
+                    <typeElement name="head">
+                        Search result Yandex
+                    </typeElement>
+                    <typeElement name="content">
+                        some content
+                    </typeElement>
+                </elements>
+            </page>
+        </pages>
+    </site>
+</sites>

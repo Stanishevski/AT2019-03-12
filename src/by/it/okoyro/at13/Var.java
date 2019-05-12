@@ -13,10 +13,10 @@ public abstract class Var implements Operation {
 
 	private static Map<String, Var> vars = new HashMap<>();
 	private static String filename = System.getProperty("user.dir") +
-									 "/src/by/it/akhmelev/calc_12/vars.txt";
+									 "/src/by/it/okoyro/at13/vars.txt";
 
 	static Var createVar(String strVar) throws CalcException {
-		strVar = strVar.replace(" ", "");
+		strVar = strVar.replace(" ", ""); // убираем пробел
 		if (strVar.matches(Patterns.SCALAR)) {
 			return new Scalar(strVar);
 		}
@@ -29,7 +29,7 @@ public abstract class Var implements Operation {
 		else {
 			Var var = vars.get(strVar);
 			if (var == null) {
-				throw new CalcException(" неизвестное выражение " + strVar);
+				throw new CalcException("неизвестное выражение " + strVar);
 			}
 			else {
 				return var;

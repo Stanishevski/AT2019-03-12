@@ -1,0 +1,9 @@
+Started by upstream project "TaskA" build number 10
+originally caused by:
+ Запущен по таймеру
+Running as SYSTEM
+Building in workspace C:\Users\Anna\.jenkins\workspace\TaskB
+Copied 4 artifacts from "TaskA" build number 10
+Archiving artifacts
+Инициирую новую сборку TaskC
+Finished: SUCCESS

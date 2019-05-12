@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://bean.at16.okoyro.it.by"
+		xmlns:tns="http://bean.at16.okoyro.it.by"
+		elementFormDefault="qualified"/>
+<element name="sites">
+<complexType>
+	<sequence>
+		<element name="site"
+				 type="tns:typeSite"
+				 minOccurs="1"
+				 maxOccurs="unbounded"/>
+	</sequence>
+</complexType>
+<complexType>
+	<sequence>
+		<element name="pages"
+				 type="tns:typePages"
+				 minOccurs="1"
+				 maxOccurs="unbounded">
+		</element>
+	</sequence>
+</complexType>
+<complexType>
+	<sequence>
+		<element name="page"
+				 type="tns:typePage"
+				 minOccurs="1"
+				 maxOccurs="unbounded" >
+		</element>
+	</sequence>
+	<attribute name="title" type="tns:TypeTitle" />
+</complexType>

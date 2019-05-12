@@ -1,0 +1,1 @@
+INSERT INTO `vshchur`.`varible` (`id`, `name`, `text`, `user_id`, `category_id`, `user_id1`, `category_category_id`) VALUES (DEFAULT, 'B', '22', 1, 1, 1, 1);

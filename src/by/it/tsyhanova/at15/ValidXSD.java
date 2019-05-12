@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class ValidXSD {
     public static void main(String[] args) {
-        String language= XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI;
+        String language= XMLConstants.W3C_XML_SCHEMA_NS_URI;
         String fileName="src/by/it/tsyhanova/at15/sites+xsd.xml";
         String schemaName="src/by/it/tsyhanova/at15/sites.xsd";
         SchemaFactory factory=SchemaFactory.newInstance(language);

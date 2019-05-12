@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema  xmlns="http://www.w3.org/2001/XMLSchema"
+         targetNamespace="http://bean.at15.udalyou.it.by"
+         xmlns:tns="http://bean.at15.udalyou.it.by"
+         elementFormDefault="qualified">
+    <element name="sites">
+        <complexType>
+            <sequence>
+                <element name="site"
+                         type="tns:typeSite"
+                         minOccurs="1"
+                         maxOccurs="unbounded"></element>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="typeSite">
+        <sequence>
+            <element name="pages"
+                     type="tns:typePages">
+            </element>
+        </sequence>
+        <attribute name="url" type="string"/>
+    </complexType>
+    <complexType name="typePages">
+        <sequence>
+            <element name="page" type="tns:typePage" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="typePage">
+        <sequence>
+            <element name="uri" type="string"/>
+            <element name="elements"
+                     type="tns:typeElements"
+                     maxOccurs="unbounded"/>
+         </sequence>
+    <attribute name="title" type="string"/>
+    </complexType>
+    <complexType name="typeElements">
+        <sequence>
+            <element name="typeElement"
+                     type="tns:typeElement"
+                     maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="typeElement">
+        <simpleContent>
+            <extension base="string">
+            <attribute name="name" type="string" use="required"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+</schema>

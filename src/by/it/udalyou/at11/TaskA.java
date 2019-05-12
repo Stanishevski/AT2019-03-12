@@ -58,8 +58,8 @@ private static void writeInt(String dir, List<Integer> list) {
             sum = sum + element;
             count++;
         }
-        System.out.println("\navg= " + sum / count);//=sum/list.size()
-        txt.println("\navg= " + sum / count);
+        System.out.println("\navg=" + sum / count);//=sum/list.size()
+        txt.println("\navg=" + sum / count);
 
 
     } catch (IOException e) {

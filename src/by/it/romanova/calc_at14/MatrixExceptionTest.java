@@ -23,8 +23,8 @@ public class MatrixExceptionTest {
 
     @Parameters
     public static List<String> parameters(){
-        return Arrays.asList("{{1,2.0,3},{4,5,6},{7, 8,9}}/{{1,2.5,3},{4,0,6},{7,8,-9}}",
-                "B=A*3.5",
+        return Arrays.asList("A={{1,2.0,3},{4,5,6},{7, 8,9}}/{{1,2.5,3},{4,0,6},{7,8,-9}}",
+                "B=abc",
                 "B1={{1,2},{4,5}}/0",
                 "B2={{1,2},{4,5}}+{{1,2.0,3},{4,5,6},{7, 8,9}}",
                 "B3={{1,2},{4,5}}-{{1,2.0,3},{4,5,6},{7, 8,9}}");

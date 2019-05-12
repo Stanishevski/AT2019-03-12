@@ -1,0 +1,8 @@
+Started by upstream project "TaskA" build number 22
+originally caused by:
+ Started by user Alina Grinkevich
+Running as SYSTEM
+Building in workspace C:\Users\Alina\.jenkins\workspace\TaskB
+Copied 15 artifacts from "TaskA" build number 22
+Archiving artifacts
+Finished: SUCCESS

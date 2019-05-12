@@ -4,7 +4,7 @@ target/
 
 .idea
 
-*.jar
+*.jar8
 *.war
 *.ear
 *.iml
