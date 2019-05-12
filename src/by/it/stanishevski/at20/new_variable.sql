@@ -1,1 +1,1 @@
-INSERT INTO `stanishevski`.`variable` (`id`, `name`, `text`, `user_id`, `category_id`) VALUES (12, '444A', 'tttttt', 1, 1);
+INSERT INTO `stanishevski`.`variable` (`id`, `name`, `text`, `user_id`, `category_id`) VALUES (4, '444A', 'tttttt', 1, 1);
