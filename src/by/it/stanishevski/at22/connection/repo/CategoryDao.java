@@ -1,0 +1,41 @@
+package by.it.stanishevski.at22.connection.repo;
+
+import by.it.stanishevski.at22.beans.Category;
+import by.it.stanishevski.at22.connection.ConnectionCreator;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public class CategoryDao implements InterfaceDao<Category> {
+
+    private ConnectionCreator connectionCreator;
+
+    public CategoryDao(ConnectionCreator connectionCreator) {
+        this.connectionCreator=connectionCreator;
+    }
+
+    @Override
+    public Category read(long id) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean create(Category bean) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean update(Category bean) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(Category bean) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public List<Category> getAll() throws SQLException {
+        return null;
+    }
+}

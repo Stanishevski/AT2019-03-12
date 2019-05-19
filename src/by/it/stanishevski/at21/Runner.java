@@ -10,9 +10,9 @@ import java.time.LocalDateTime;
 public class Runner {
     public static void main(String[] args) throws SQLException {
         UserDao userDao = new UserDao();
-        User user = userDao.read(5);
-        user.setUsername("Nouwenki");
-        System.out.println("user after read 5: " + user);
+        User user = userDao.read(3);
+        //user.setUsername("Nouwenki");
+        System.out.println("user after read 3: " + user);
 
         //проверим создание
         Timestamp date = Timestamp.valueOf(LocalDateTime.now());
