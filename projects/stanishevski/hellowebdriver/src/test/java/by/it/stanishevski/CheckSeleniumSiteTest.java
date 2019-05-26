@@ -1,5 +1,6 @@
 package by.it.stanishevski;
 
+import com.sun.org.apache.bcel.internal.classfile.LineNumber;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -34,6 +35,37 @@ public class CheckSeleniumSiteTest {
 
             WebElement checkDependencyText = driver.findElement(By.xpath("//pre [contains(., '<artifactId>selenium-java</artifactId>')]"));
             String stroka = checkDependencyText.getText();
+
+
+
+            int positionArtifactId = stroka.indexOf("<artifactId>selenium-java</artifactId>");
+            if (positionArtifactId > -1) {
+                System.out.println("Element <artifactId>selenium-java</artifactId> OK");
+            } else {
+                System.out.println("Element doesn't issue");
+            }
+            int posVersionStart = stroka.indexOf("<version>") + 9;
+            int posVersionEnd = stroka.indexOf("</version>");
+            String strVersion = stroka.substring(posVersionStart, posVersionEnd);
+            System.out.println("Java Version: " + strVersion);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
         finally {
             driver.quit();
