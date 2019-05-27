@@ -10,8 +10,8 @@ import java.io.Reader;
 
 public class StAX {
 
-    private static String tab = "";
-    private static StringBuilder text=new StringBuilder();
+    private  String tab = "";
+    private  StringBuilder text=new StringBuilder();
 
     public static void main(String[] args) throws FileNotFoundException, XMLStreamException {
         XMLInputFactory factory = XMLInputFactory.newInstance();

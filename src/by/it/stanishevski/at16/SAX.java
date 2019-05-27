@@ -31,7 +31,11 @@ public class SAX extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        System.out.println(tab+"<"+qName+">");
+        StringBuilder at = new StringBuilder();
+        int n= attributes.getLength();
+        for (int i = 0; i < n ; i++) {
+        at.append(" ").append(attributes.getLocalName(i)).append("=").append(attributes.getValue(i));}
+        System.out.println(tab+"<"+qName+at+">");
         tab=tab.concat("\t");
     }
 
