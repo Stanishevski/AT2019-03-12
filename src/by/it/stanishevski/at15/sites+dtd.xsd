@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sites" type="sitesType"/>
+  <xs:complexType name="elementType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="element_id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="elementsType">
+    <xs:sequence>
+      <xs:element type="elementType" name="element" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pageType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Index"/>
+            <xs:enumeration value="Contact page"/>
+            <xs:enumeration value="Support page"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="elementsType" name="elements"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="title" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="pagesType">
+    <xs:sequence>
+      <xs:element type="pageType" name="page" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="siteType">
+    <xs:sequence>
+      <xs:element type="pagesType" name="pages"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="url" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="sitesType">
+    <xs:sequence>
+      <xs:element type="siteType" name="site" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
