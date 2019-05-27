@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sites>
+    <site url="http://pvt.by">
+        <pages>
+            <page title="Main">
+                <name>Index</name>
+                <elements>
+                    <element element_id="Menu">Menu page </element>
+                    <element element_id="About...">About us page</element>
+                    <element element_id="Counter">Visitors counter page</element>
+                </elements>
+            </page>
+            <page title="Contacts">
+                <name>Contact page</name>
+                <elements>
+                    <element element_id="City">Minsk</element>
+                    <element element_id="Street">Skryganova 14</element>
+                    <element element_id="Floor">5</element>
+                </elements>
+            </page>
+        </pages>
+    </site>
+    <site url="http://fluke.com">
+        <pages>
+            <page title="Home">
+                <name>Index</name>
+                <elements>
+                    <element element_id="Measurment">Catalog of equipments page</element>
+                    <element element_id="Deallers">Dealler adressess page</element>
+                    <element element_id="Price">Price-list page  </element>
+                </elements>
+            </page>
+            <page title="Support">
+                <name>Support page</name>
+                <elements>
+                    <element element_id="Soft">Software download page</element>
+                    <element element_id="Instruction">Manuals</element>
+                    <element element_id="Repair">Service center adressess page </element>
+                </elements>
+            </page>
+        </pages>
+    </site>
+</sites>
