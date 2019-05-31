@@ -4,13 +4,13 @@ class Vector extends Var {
 
 
 
-    Vector(double[ ] value)
+    Vector(double[ ] value);
 
 
-    Vector(Vector vector)
+    Vector(Vector vector);
 
 
-    Vector(String strVector)
+    Vector(String strVector);
 
 
 
