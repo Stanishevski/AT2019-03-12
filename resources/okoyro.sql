@@ -22,8 +22,7 @@ CREATE TABLE IF NOT EXISTS `okoyro`.`user` (
   `email` VARCHAR(255) NULL,
   `password` VARCHAR(32) NOT NULL,
   `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`id`));
 
 
 -- -----------------------------------------------------
@@ -32,8 +31,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `okoyro`.`category` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`id`));
 
 
 -- -----------------------------------------------------
@@ -55,15 +53,14 @@ CREATE TABLE IF NOT EXISTS `okoyro`.`variable` (
     FOREIGN KEY (`category_id`)
     REFERENCES `okoyro`.`category` (`id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    ON UPDATE NO ACTION);
 
 -- -----------------------------------------------------
 -- Data for table `okoyro`.`user`
 -- -----------------------------------------------------
-INSERT INTO `okoyro`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (1, 'default', 'default@mail.com', 'qwerty', NULL);
-INSERT INTO `okoyro`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (2, 'simple', 'simple@gmail.com', 'asdfg', NULL);
-INSERT INTO `okoyro`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (3, 'admin', 'admin@domain.com', 'zxcvb', NULL);
+INSERT INTO `okoyro`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (1, 'default', 'default@mail.com', 'qwerty', DEFAULT);
+INSERT INTO `okoyro`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (2, 'simple', 'simple@gmail.com', 'asdfg', DEFAULT);
+INSERT INTO `okoyro`.`user` (`id`, `username`, `email`, `password`, `create_time`) VALUES (3, 'admin', 'admin@domain.com', 'zxcvb', DEFAULT);
 
 
 -- -----------------------------------------------------

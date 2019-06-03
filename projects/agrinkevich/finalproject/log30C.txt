@@ -1,0 +1,87 @@
+Started by user Alina Grinkevich
+Running as SYSTEM
+Building in workspace C:\Users\Alina\.jenkins\workspace\at30Cucumber
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/algrinkevich/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/algrinkevich/AT2019-03-12.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress https://github.com/algrinkevich/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 269cec10a6121520eb2f9ac100c09de3d992b570 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 269cec10a6121520eb2f9ac100c09de3d992b570
+Commit message: "test commit 3"
+ > git.exe rev-list --no-walk 6b882d4e5566643a50e1c0511bb0080ca8c701ce # timeout=10
+[at30Cucumber] $ cmd.exe /C "D:\autotesting\apache-maven-3.6.1\bin\mvn.cmd -f C:\Users\Alina\.jenkins\workspace\at30Cucumber\projects\agrinkevich\hellowebdriver\pom.xml clean test "-Dtest=by.it.agrinkevich.cucumber.*" && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< by.it.agrinkevich:hellowebdriver >------------------
+[INFO] Building hellowebdriver 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ hellowebdriver ---
+[INFO] Deleting C:\Users\Alina\.jenkins\workspace\at30Cucumber\projects\agrinkevich\hellowebdriver\target
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Alina\.jenkins\workspace\at30Cucumber\projects\agrinkevich\hellowebdriver\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\Alina\.jenkins\workspace\at30Cucumber\projects\agrinkevich\hellowebdriver\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to C:\Users\Alina\.jenkins\workspace\at30Cucumber\projects\agrinkevich\hellowebdriver\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ hellowebdriver ---
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 45536
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 31, 2019 3:47:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 18326
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 31, 2019 3:47:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 10029
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 31, 2019 3:51:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 17662
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+мая 31, 2019 3:51:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+2 Scenarios (2 passed)
+24 Steps (24 passed)
+4m51,577s
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 298.561 sec - in TestSuite
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:49 min
+[INFO] Finished at: 2019-05-31T15:52:33+03:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS

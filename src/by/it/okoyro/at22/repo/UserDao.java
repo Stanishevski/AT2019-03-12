@@ -32,7 +32,7 @@ public class UserDao implements InterfaceDao<User> {
 						resultSet.getString("username"),
 						resultSet.getString("password"),
 						resultSet.getString("email"),
-						resultSet.getDate("create_time"));
+						resultSet.getTimestamp("create_time"));
 			}
 		}
 		return user;
@@ -43,7 +43,6 @@ public class UserDao implements InterfaceDao<User> {
 		String sql = String.format("INSERT INTO `okoyro`.`user` (`username`, `email`, `password`, `create_time`)" +
 								   "VALUES ('%s', '%s', '%s', '%s')",
 								   user.getUsername(), user.getEmail(), user.getPassword(), user.getDate());
-
 		try
 				(Connection connection = connectionCreator.get();
 				 Statement statement = connection.createStatement()) {
@@ -55,16 +54,15 @@ public class UserDao implements InterfaceDao<User> {
 					return true;
 				}
 			}
-
 		}
 		return false;
 	}
 
 	@Override
 	public boolean update(User user) throws SQLException {
-		String sql = String.format("UPDATE `okoyro`.`user` " +
+		String sql = String.format("UPDATE `okoyro`.`user`" +
 								   " SET username='%s', email='%s', password='%s', create_time='%s'" +
-								   " WHERE id='%d'",
+								   " WHERE id=%d",
 								   user.getUsername(), user.getEmail(), user.getPassword(), user.getDate(), user.getId());
 
 		try (
@@ -77,8 +75,7 @@ public class UserDao implements InterfaceDao<User> {
 
 	@Override
 	public boolean delete(User user) throws SQLException {
-		String sql = String.format("DELETE FROM `okoyro`.`user` " +
-								   " WHERE id='%d'", user.getId());
+		String sql = String.format("DELETE FROM `okoyro`.`user` WHERE id = %d", user.getId());
 
 		try (
 				Connection connection = connectionCreator.get();

@@ -24,14 +24,14 @@ public class UserDAOTest {
         System.out.println(user);
     }
 
-    /*@Test(timeout = 5000)
+    @Test(timeout = 5000)
     public void userDAOUpdateTest() throws Exception{
         user.setUsername("Masha");
         dao.user.update(user);
         user = dao.user.read(user.getId());
         assertEquals("Masha",user.getUsername());
         System.out.println("user after update: " + user);
-    }*/
+    }
 
     @Test(timeout = 5000)
     public void userDAODeleteTest() throws Exception {

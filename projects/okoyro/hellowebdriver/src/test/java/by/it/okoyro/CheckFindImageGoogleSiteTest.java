@@ -1,15 +1,15 @@
 package by.it.okoyro;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -23,7 +23,7 @@ public class CheckFindImageGoogleSiteTest {
 				.until(ExpectedConditions.presenceOfElementLocated(queryLocator));
 	}
 
-	@Before
+	@BeforeMethod
 	public void setUpBrowser() {
 		driver = new ChromeDriver();
 		//		driver.manage().window().maximize(); //doesn't work WebDriverException: unknown error: failed to change window state to maximized, current state is normal
@@ -60,10 +60,10 @@ public class CheckFindImageGoogleSiteTest {
 		(new WebDriverWait(driver, 5))
 				.until(ExpectedConditions.urlToBe("https://www.seleniumhq.org/"));
 		String tabUrl = driver.getCurrentUrl();
-		Assert.assertTrue("", tabUrl.startsWith("https://www.seleniumhq.org/"));
+		Assert.assertTrue(tabUrl.startsWith("https://www.seleniumhq.org/"), "");
 	}
 
-	@After
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}

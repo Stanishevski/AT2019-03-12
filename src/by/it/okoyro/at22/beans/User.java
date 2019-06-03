@@ -60,6 +60,19 @@ public class User {
 		this.create_time = date;
 	}
 
+
+	@Override
+ public boolean equals(Object o) {
+     if (this == o) return true;
+     if (o == null || getClass() != o.getClass()) return false;
+
+     User user = (User) o;
+
+     if (username != null ? !username.equals(user.getUsername()) : user.getUsername() != null) return false;
+     if (password != null ? !password.equals(user.getPassword()) : user.getPassword() != null) return false;
+     return email != null ? email.equals(user.getEmail()) : user.getEmail() == null;
+ }
+
 	@Override
 	public String toString() {
 		return "User{" +

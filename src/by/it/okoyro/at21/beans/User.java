@@ -39,6 +39,7 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -69,5 +70,18 @@ public class User {
 			   ", email='" + email + '\'' +
 			   ", create_time=" + create_time +
 			   '}';
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		User user = (User) o;
+
+		if (username != null ? !username.equals(user.username) : user.username != null) return false;
+		if (password != null ? !password.equals(user.password) : user.password != null) return false;
+		if (email != null ? !email.equals(user.email) : user.email != null) return false;
+		return create_time != null ? create_time.equals(user.create_time) : user.create_time == null;
 	}
 }

@@ -20,15 +20,12 @@
   </properties>
 
   <dependencies>
-
     <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-testng</artifactId>
       <version>${allure.version}</version>
       <scope>test</scope>
     </dependency>
-
-
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
@@ -41,13 +38,11 @@
       <version>6.8</version>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-java</artifactId>
       <version>1.2.5</version>
     </dependency>
-
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-testng</artifactId>

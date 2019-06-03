@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+  <test name="hellowebdriver">
+    <classes>
+      <class name="by.it.romanova.calculator.MatrixCreateTest"/>
+      <class name="by.it.romanova.calculator.MatrixEvaluateTest"/>
+      <class name="by.it.romanova.calculator.MatrixExceptionTest"/>
+      <class name="by.it.romanova.calculator.MatrixMulTest"/>
+      <class name="by.it.romanova.calculator.MatrixSubTest"/>
+      <class name="by.it.romanova.calculator.MatrixSumTest"/>
+      <class name="by.it.romanova.calculator.ScalarCreateTest"/>
+      <class name="by.it.romanova.calculator.ScalarDivTest"/>
+      <class name="by.it.romanova.calculator.ScalarEvaluateTest"/>
+      <class name="by.it.romanova.calculator.ScalarExceptionTest"/>
+      <class name="by.it.romanova.calculator.ScalarMulTest"/>
+      <class name="by.it.romanova.calculator.ScalarSubTest"/>
+      <class name="by.it.romanova.calculator.ScalarSumTest"/>
+      <class name="by.it.romanova.calculator.Test_at13_for_calc"/>
+      <class name="by.it.romanova.calculator.VectorCreateTest"/>
+      <class name="by.it.romanova.calculator.VectorEvaluateTest"/>
+      <class name="by.it.romanova.calculator.VectorExceptionTest"/>
+      <class name="by.it.romanova.calculator.VectorMulTest"/>
+      <class name="by.it.romanova.calculator.VectorSubTest"/>
+      <class name="by.it.romanova.calculator.VectorSumTest"/>
+    </classes>
+  </test> <!-- hellowebdriver -->
+</suite> <!-- Default Suite -->

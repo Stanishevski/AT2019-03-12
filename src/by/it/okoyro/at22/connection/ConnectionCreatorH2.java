@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class ConnectionCreatorH2 implements ConnectionCreator {
 
-	static {
-		URL resource = ConnectionCreatorH2.class.getClassLoader() // resource is null!!!!
+	{
+		URL resource = ConnectionCreatorH2.class.getClassLoader()
 				.getResource("okoyro.sql");
 		String sqlFile = resource.toString();
 		try {
@@ -22,6 +22,6 @@ public class ConnectionCreatorH2 implements ConnectionCreator {
 
 	@Override
 	public Connection get() throws SQLException {
-		return DriverManager.getConnection("jdbc:h2:mem:test");
+		return DriverManager.getConnection("jdbc:h2:mem:test;TRACE_LEVEL_SYSTEM_OUT=3");
 	}
 }

@@ -27,7 +27,7 @@ public class UserDao implements InterfaceDao<User> {
 						resultSet.getString("username"),
 						resultSet.getString("password"),
 						resultSet.getString("email"),
-						resultSet.getDate("create_time"));
+						resultSet.getTimestamp("create_time"));
 			}
 		}
 		return user;
