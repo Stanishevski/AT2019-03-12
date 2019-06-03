@@ -12,8 +12,8 @@ DROP SCHEMA IF EXISTS `romanova` ;
 -- -----------------------------------------------------
 -- Schema romanova
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `romanova` DEFAULT CHARACTER SET utf8;
-USE `romanova`;
+CREATE SCHEMA IF NOT EXISTS `romanova` DEFAULT CHARACTER SET utf8 ;
+USE `romanova` ;
 
 -- -----------------------------------------------------
 -- Table `romanova`.`user`
@@ -47,8 +47,6 @@ CREATE TABLE IF NOT EXISTS `romanova`.`variable` (
   `user_id` INT NOT NULL,
   `category_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_variable_user_idx` (`user_id` ASC) VISIBLE,
-  INDEX `fk_variable_category1_idx` (`category_id` ASC) VISIBLE,
   CONSTRAINT `fk_variable_user`
     FOREIGN KEY (`user_id`)
     REFERENCES `romanova`.`user` (`id`)

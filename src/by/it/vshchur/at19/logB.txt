@@ -1,0 +1,8 @@
+Started by upstream project "TaskA" build number 103
+originally caused by:
+ Started by user admin
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\TaskB
+Copied 7 artifacts from "TaskA" build number 103
+Archiving artifacts
+Triggering a new build of TaskC
+Finished: SUCCESS

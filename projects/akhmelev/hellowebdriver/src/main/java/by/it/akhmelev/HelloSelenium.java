@@ -11,10 +11,10 @@ public class HelloSelenium {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver=new ChromeDriver();
         driver.get("https://google.com");
-        By queryLocator=By.xpath("//input[@class='gLFyf gsfi']");
+        By queryLocator=By.xpath("//input[@name='q']");
         WebElement queryInput = waitAndGetWebElement(driver, queryLocator);
         queryInput.sendKeys("привет\n");
-        waitAndGetWebElement(driver,By.xpath("//span[@class=\"csb ch\"]"));
+        waitAndGetWebElement(driver,By.xpath("//div[@class='rc']/div[@class='r']"));
         driver.quit();
     }
 

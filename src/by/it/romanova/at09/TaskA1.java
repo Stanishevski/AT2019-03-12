@@ -15,14 +15,14 @@ public class TaskA1 {
             task.list.add((int)Math.ceil(Math.random()*10));
         }
         System.out.println(task.list);
-        task.clearBad(task.list);
+     //   task.clearBad(task.list);
         System.out.println(task.list);
     }
-
-    private void clearBad(List<Integer> grades){
-        grades.removeIf(grade -> grade < 4);
-
-
-
-    }
+//
+//    private void clearBad(List<Integer> grades){
+//        grades.removeIf(grade -> grade < 4);
+//
+//
+//
+//    }
 }

@@ -35,7 +35,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
                     .selectOneWay()
                     .setOrigin("Minsk, Belarus (MSQ-All Airports)")
                     .setDestination("Moscow, Russia (MOW-All Airports)")
-                    .setDepartingDate("6/6/2019")
+                    .setDepartingDate("6/23/2019")
                     .getSearch();
 
             int resultSearchCount = resultPage.getResultSearchCount();

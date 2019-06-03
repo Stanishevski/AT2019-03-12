@@ -1,0 +1,8 @@
+Started by upstream project "TaskB" build number 3
+originally caused by:
+ Started by upstream project "TaskA" build number 15
+ originally caused by:
+  Started by timer
+Building in workspace /var/jenkins_home/workspace/TaskC
+Copied 1 artifact from "TaskA" build number 15
+Finished: SUCCESS

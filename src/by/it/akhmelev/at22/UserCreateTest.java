@@ -10,6 +10,9 @@ import java.util.Date;
 import static by.it.akhmelev.at22.Dao.TypeDao.H2;
 import static org.junit.Assert.assertEquals;
 
+
+
+
 public class UserCreateTest {
 
 

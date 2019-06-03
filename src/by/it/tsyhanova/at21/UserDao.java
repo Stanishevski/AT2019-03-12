@@ -35,6 +35,8 @@ public class UserDao implements InterfaceDao<User> {
         }
         return user;
     }
+    //чтобы сделать List пользователей, нужно заменить в методе read if на while
+
     //создание
     @Override
     public boolean create(User user) throws SQLException {

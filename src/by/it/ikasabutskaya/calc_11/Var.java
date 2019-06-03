@@ -7,7 +7,7 @@ public abstract class Var implements Operation {
 
     private static Map<String, Var> vars = new HashMap<>();
 
-    static Var saveVar(String name, Var var) {
+    public static Var saveVar(String name, Var var) {
         vars.put(name, var);
 
         return var;
@@ -16,7 +16,7 @@ public abstract class Var implements Operation {
 
 
 
-   static Var createVar(String strVar) throws CalcException {
+   public static Var createVar(String strVar) throws CalcException {
        strVar=strVar.replace(" ","");
        if (strVar.matches(Patterns.SCALAR))
            return new Scalar(strVar);

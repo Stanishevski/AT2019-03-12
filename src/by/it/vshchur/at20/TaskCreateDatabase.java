@@ -17,8 +17,8 @@ public class TaskCreateDatabase {
         ){
 
             try {
-                statement.executeQuery(String.valueOf(new BufferedReader(new FileReader(System.getProperty("user.dir") +
-                        "/src/by/it/vshchur/at20/create.sql"))));
+                statement.executeUpdate(String.valueOf(new BufferedReader(new FileReader(
+                        System.getProperty("user.dir") + "/src/by/it/vshchur/at20/create.sql"))));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sites>
+    <site url="http://tut.by">
+        <pages>
+            <page title="Main page">
+                <uri>/index</uri>
+                <elements>
+                    <element name="head">head for main</element>
+                    <element name="body">body</element>
+                </elements>
+            </page>
+            <page title="Registration page">
+                <uri>/registration</uri>
+                <elements>
+                    <element name="head">head for registration</element>
+                    <element name="form">registration form</element>
+                </elements>
+            </page>
+        </pages>
+    </site>
+    <site url="http://onliner.by">
+        <pages>
+            <page title="News page">
+                <uri>/index</uri>
+                <elements>
+                    <element name="head">Search field</element>
+                    <element name="body">news block</element>
+                </elements>
+            </page>
+            <page title="Catalog">
+                <uri>/index</uri>
+                <elements>
+                    <element name="head">Search field</element>
+                    <element name="content">content</element>
+                </elements>
+            </page>
+        </pages>
+    </site>
+</sites>

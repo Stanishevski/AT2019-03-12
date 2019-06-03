@@ -1,0 +1,72 @@
+Started by timer
+Building in workspace /var/jenkins_home/workspace/TaskA
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/okoyro/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/okoyro/AT2019-03-12.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/okoyro/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 426e38e2249b520788eebd20b892392fe4205f93 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 426e38e2249b520788eebd20b892392fe4205f93
+Commit message: "at19-jenkins"
+ > git rev-list --no-walk 426e38e2249b520788eebd20b892392fe4205f93 # timeout=10
+[TaskA] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn -f /var/jenkins_home/workspace/TaskA/projects/okoyro/calculator/pom.xml package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< by.it.okoyro:calculator >-----------------------
+[INFO] Building calculator 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ calculator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/TaskA/projects/okoyro/calculator/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ calculator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ calculator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/TaskA/projects/okoyro/calculator/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ calculator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ calculator ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running by.it.okoyro.ScalarSumTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.347 s - in by.it.okoyro.ScalarSumTest
+[INFO] Running by.it.okoyro.ScalarMulTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in by.it.okoyro.ScalarMulTest
+[INFO] Running by.it.okoyro.ScalarDivTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in by.it.okoyro.ScalarDivTest
+[INFO] Running by.it.okoyro.ScalarCreateTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.005 s - in by.it.okoyro.ScalarCreateTest
+[INFO] Running by.it.okoyro.ScalarSubTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in by.it.okoyro.ScalarSubTest
+[INFO] Running by.it.okoyro.ParserTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in by.it.okoyro.ParserTest
+[INFO] Running by.it.okoyro.ScalarEvaluateTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in by.it.okoyro.ScalarEvaluateTest
+[INFO]
+[INFO] Results:
+[INFO]
+[WARNING] Tests run: 30, Failures: 0, Errors: 0, Skipped: 1
+[INFO]
+[INFO]
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ calculator ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.826 s
+[INFO] Finished at: 2019-05-07T06:41:27Z
+[INFO] ------------------------------------------------------------------------
+Archiving artifacts
+Triggering a new build of TaskB
+Finished: SUCCESS
