@@ -1,51 +1,43 @@
 package by.it.okoyro;
 
-import by.it.okoyro.pages.HomePageB;
-import by.it.okoyro.pages.SearchResultPage;
 import by.it.okoyro.pages.HomePage;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import by.it.okoyro.pages.SearchResultPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 
 public class ExpediaTest {
 
 	private WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void setUp() {
 		driver = new ChromeDriver();
 	}
 
-	@Test
+	@Test(invocationCount = 5)
 	public void taskA() throws Exception {
-		driver.get("https://www.expedia.com/");
-
+		driver.get("https://www.expedia.com.my/");
+		
 		HomePage homePage = new HomePage(driver);
 		SearchResultPage resultPage = homePage
 				.selectSearchFlightMode()
 				.selectOneWayFlight()
-				.setFlightFrom("minsk") //, Belarus (MSQ-All Airports
-				.setFlightTo("moscow") // , Russia (MOW-All Airports
-				.setDepartureDate("06/20/2019")
+				.setFlightFrom("minsk")
+				.setFlightTo("moscow")
+				.setDepartureDate("20/06/2019")
 				.performSearch();
 		int searchResultsQuantity = resultPage.countSearchResults();
 		Assert.assertTrue(searchResultsQuantity > 1);
 	}
 
-	@Test
-	public void taskB() throws Exception {
-		driver.get("https://www.expedia.com/");
-
-		HomePageB homePageB = new HomePageB(driver);
-	}
-
-	@After
-	public void tearDown() {
-		driver.quit();
-	}
-
+	@AfterMethod
+		public void tearDown() {
+			driver.quit();
+		}
 
 }
