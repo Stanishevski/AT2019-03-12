@@ -13,7 +13,7 @@ import java.util.List;
 public class Util {
 
     public static void shortWait(WebDriver driver){
-        new Actions(driver).pause(10000).perform();
+        new Actions(driver).pause(5000).perform();
     }
 
     public static WebElement find(WebDriver driver, By queryLocator) {

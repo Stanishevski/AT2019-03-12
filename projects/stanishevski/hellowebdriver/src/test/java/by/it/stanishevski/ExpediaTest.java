@@ -1,52 +1,59 @@
 package by.it.stanishevski;
 
-
-import by.it.stanishevski.pages.ResultPage;
-import by.it.stanishevski.pages.StartPage;
+import by.it.stanishevski.pages.HomePageB;
+import by.it.stanishevski.pages.ResultPage1;
+import by.it.stanishevski.pages.StartPage1;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.Date;
 //import org.testng.Assert;
 //import org.testng.annotations.AfterMethod;
 //import org.testng.annotations.BeforeMethod;
 //import org.testng.annotations.Test;
 
-    public class ExpediaTest {
 
-        WebDriver driver;
+public class ExpediaTest {
 
+    WebDriver driver;
 
-        @Before
-        public void setUpBrowser() {
-            driver = new ChromeDriver();
-        }
+    @Before
+    public void setUpBrowser() {
+        driver = new ChromeDriver();
+    }
 
-        @Test
-        public void taskA() throws Exception {
-            driver.get("https://www.expedia.com/");
+    @Test
+    public void taskA() throws Exception {
+        driver.get("https://www.expedia.com/"); //"https://www.expedia.com.my/"
 
-            StartPage startPage = new StartPage(driver);
+        StartPage1 startPage = new StartPage1(driver);
+        ResultPage1 resultPage = startPage
+                .selectSearchFlightMode()
+                .selectOneWay()
+                .setOrigin("Minsk, Belarus (MSQ-All Airports)")
+                .setDestination("Moscow, Russia (MOW-All Airports)")
+                .setDepartingDate("07/03/2019")
+                .getSearch();
 
-            ResultPage resultPage = startPage
-                    .selectSearchFlightMode()
-                    .selectOneWay()
-                    .setOrigin("Minsk, Belarus (MSQ-All Airports)")
-                    .setDestination("Moscow, Russia (MOW-All Airports)")
-                    .setDepartingDate("6/23/2019")
-                    .getSearch();
-
-            int resultSearchCount = resultPage.getResultSearchCount();
-            Assert.assertTrue(resultSearchCount > 1);
-
-
-            //Thread.sleep(15000); //это чтобы успеть увидеть результат, а вообще нужно убрать
+        int resultSearchCount = resultPage.getResultSearchCount();
+        Assert.assertTrue(resultSearchCount > 1);
 
 
+        //Thread.sleep(15000); //это чтобы успеть увидеть результат, а вообще нужно убрать
 
-            //перенос всех событий в POM сделал код чище.
+
+
+        //перенос всех событий в POM сделал код чище.
         /*
         WebElement buttonOneWay = driver.findElement(By.id("flight-type-one-way-label-hp-flight"));
         buttonOneWay.click();
@@ -67,10 +74,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
         List<WebElement> resultPrice=driver.findElements(By.xpath("//*[@data-test-id='listing-price-dollars']"));
         Assert.assertTrue(resultPrice.size()>1);
         */
-        }
-
-        @After
-        public void tearDownBrowser() {
-            driver.quit();
-        }
     }
+    @Test
+    public void taskB() throws Exception {
+        driver.get("https://www.expedia.com/");
+
+        HomePageB homePageB = new HomePageB(driver);
+
+    }
+
+    @After
+    public void tearDownBrowser() {
+        driver.quit();
+    }
+}
