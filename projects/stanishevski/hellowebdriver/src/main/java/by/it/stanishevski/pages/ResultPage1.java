@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class ResultPage {
+public class ResultPage1 {
 
     private WebDriver driver;
 
     private By byPrice=By.xpath("//*[@data-test-id='listing-price-dollars']");
 
-    public ResultPage(WebDriver driver) {
+    public ResultPage1(WebDriver driver) {
         this.driver = driver;
     }
 

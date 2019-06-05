@@ -5,11 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class StartPage {
+public class StartPage1 {
 
     private WebDriver driver;
 
-    public StartPage(WebDriver driver) {
+    public StartPage1(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -21,17 +21,17 @@ public class StartPage {
     private By byInputDepartingDate = By.id("flight-departing-single-hp-flight");
     private By byAriaOption0 = By.id("aria-option-0");
 
-    public StartPage selectSearchFlightMode() {
+    public StartPage1 selectSearchFlightMode() {
         Util.find(driver, byButtonFlight).click();
         return this;
     }
 
-    public StartPage selectOneWay() {
+    public StartPage1 selectOneWay() {
         Util.find(driver, byButtonOneWay).click();
         return this;
     }
 
-    public StartPage setOrigin(String origin) {
+    public StartPage1 setOrigin(String origin) {
         WebElement originInput = Util.find(driver, byInputOrigin);
         originInput.click();
         Util.shortWait(driver);
@@ -42,7 +42,7 @@ public class StartPage {
         return this;
     }
 
-    public StartPage setDestination(String destination) {
+    public StartPage1 setDestination(String destination) {
         WebElement inputDestination = Util.find(driver, byInputDestination);
         inputDestination.click();
         Util.shortWait(driver);
@@ -53,7 +53,7 @@ public class StartPage {
         return this;
     }
 
-    public StartPage setDepartingDate(String date) {
+    public StartPage1 setDepartingDate(String date) {
         WebElement inputDepartingDate = Util.find(driver, byInputDepartingDate);
         inputDepartingDate.click();
         Util.shortWait(driver);
@@ -62,11 +62,11 @@ public class StartPage {
         return this;
     }
 
-    public ResultPage getSearch() {
+    public ResultPage1 getSearch() {
         WebElement inputDepartingDate = Util.find(driver, byInputDepartingDate);
         inputDepartingDate.sendKeys("\n");
         Util.shortWait(driver);
-        ResultPage resultPage=new ResultPage(driver);
+        ResultPage1 resultPage=new ResultPage1(driver);
         return resultPage;
     }
 

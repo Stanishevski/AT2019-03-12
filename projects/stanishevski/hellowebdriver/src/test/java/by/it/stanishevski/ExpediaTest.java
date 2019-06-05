@@ -1,8 +1,8 @@
 package by.it.stanishevski;
 
-import by.it.stanishevski.pages.HomePageB;
-import by.it.stanishevski.pages.ResultPage1;
-import by.it.stanishevski.pages.StartPage1;
+
+import by.it.stanishevski.pages.ResultPage;
+import by.it.stanishevski.pages.StartPage;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -15,12 +15,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.Date;
-//import org.testng.Assert;
-//import org.testng.annotations.AfterMethod;
-//import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.Test;
 
 
 public class ExpediaTest {
@@ -36,8 +30,8 @@ public class ExpediaTest {
     public void taskA() throws Exception {
         driver.get("https://www.expedia.com/"); //"https://www.expedia.com.my/"
 
-        StartPage1 startPage = new StartPage1(driver);
-        ResultPage1 resultPage = startPage
+        StartPage startPage = new StartPage(driver);
+        ResultPage resultPage = startPage
                 .selectSearchFlightMode()
                 .selectOneWay()
                 .setOrigin("Minsk, Belarus (MSQ-All Airports)")
@@ -75,13 +69,13 @@ public class ExpediaTest {
         Assert.assertTrue(resultPrice.size()>1);
         */
     }
-    @Test
-    public void taskB() throws Exception {
-        driver.get("https://www.expedia.com/");
-
-        HomePageB homePageB = new HomePageB(driver);
-
-    }
+//    @Test
+//    public void taskB() throws Exception {
+//        driver.get("https://www.expedia.com/");
+//
+//        HomePageB homePageB = new HomePageB(driver);
+//
+//    }
 
     @After
     public void tearDownBrowser() {
