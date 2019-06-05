@@ -16,6 +16,7 @@ public class ExpediaTest {
 
 	@BeforeMethod
 	public void setUp() {
+		System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
 		driver = new ChromeDriver();
 	}
 
