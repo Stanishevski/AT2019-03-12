@@ -1,4 +1,4 @@
-package by.it.medvedeva.at14;
+package by.it.stanishevski.at14;
 
 public class Patterns {
     static final String SCALAR="-?[0-9]+(\\.[0-9]+)?";

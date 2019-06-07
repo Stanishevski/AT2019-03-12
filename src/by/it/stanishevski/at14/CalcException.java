@@ -1,4 +1,4 @@
-package by.it.medvedeva.at14;
+package by.it.stanishevski.at14;
 
 public class CalcException extends Exception {
     public CalcException() {
