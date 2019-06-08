@@ -4,10 +4,8 @@ import by.it.okoyro.pages.HomePage;
 import by.it.okoyro.pages.HomePageFactory;
 import by.it.okoyro.pages.SearchResultPage;
 import by.it.okoyro.pages.SearchResultPageFactory;
+import by.it.okoyro.tools.Util;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,12 +19,16 @@ public class ExpediaTest {
 	@BeforeMethod
 	public void setUp() {
 		// headless mode is required to run tests in docker container
-		ChromeDriverService service =
-		    new ChromeDriverService.Builder().withWhitelistedIps("").withVerbose(true).build();
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.setHeadless(true);
-		driver = new ChromeDriver(service, chromeOptions);
+		driver = Util.buildChromeDriver();
 	}
+
+//	private static ChromeDriver buildChromeDriver() {
+//		ChromeDriverService service =
+//		    new ChromeDriverService.Builder().withWhitelistedIps("").build();
+//		ChromeOptions chromeOptions = new ChromeOptions();
+//		chromeOptions.setHeadless(System.getProperty("headless") != null);
+//		return new ChromeDriver(service, chromeOptions);
+//	}
 
 	@Test
 	public void taskA() throws Exception {
