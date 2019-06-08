@@ -47,20 +47,46 @@ public class CheckFindImageGoogleSiteTest {
 		By byFirstImageLink = By.xpath("//*[@class='rg_bx rg_di rg_el ivg-i'][@data-ri='0']");
 		WebElement firstImageLink = waitAndGetWebElement(driver, byFirstImageLink);
 		firstImageLink.click();
-
 		By byVisitLink = By.xpath("//a[@class='irc_vpl i3599 irc_lth'][@tabindex=0]");
 		WebElement visitLink = waitAndGetWebElement(driver, byVisitLink);
-		visitLink.click();  // page is opened in a separate browser tab
-		// TODO: 2019-05-14 add wait for page to load (periodically fails with org.openqa.selenium.WebDriverException: no such execution context)
+		//		WebElement visitLink =  driver.findElement(By.xpath("//a[@class='irc_vpl i3599 irc_lth'][@tabindex=0]"));
+		String urlText  =  visitLink.getAttribute("href");
+		Assert.assertEquals(urlText,"https://www.seleniumhq.org/");
+	}
 
-		Set<String> handles = driver.getWindowHandles();
-		ArrayList<String> handlsList = new ArrayList<>(handles);
-		String newTab = handlsList.get(handlsList.size() - 1);
-		driver.switchTo().window(newTab);
-		(new WebDriverWait(driver, 5))
-				.until(ExpectedConditions.urlToBe("https://www.seleniumhq.org/"));
-		String tabUrl = driver.getCurrentUrl();
-		Assert.assertTrue(tabUrl.startsWith("https://www.seleniumhq.org/"), "");
+	@Test(invocationCount = 5)
+		public void taskB() throws Exception {
+		driver.get("https://google.com");
+				By bySearchInputField = By.cssSelector("input.gLFyf.gsfi");
+				WebElement searchInputField = waitAndGetWebElement(driver, bySearchInputField);
+				searchInputField.sendKeys("seleniumhq\n");
+				(new WebDriverWait(driver, 5))
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("td.cur"))); // wait for footer with "Google"
+
+				By byimagesLink = By.cssSelector("div#hdtb-msb-vis  a.q.qs[href*='isch']");
+				WebElement imagesLink = waitAndGetWebElement(driver, byimagesLink);
+				imagesLink.click();
+				(new WebDriverWait(driver, 5))
+						.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("span.S3Wjs"))); // wait for photo camera image
+
+				By byFirstImageLink = By.xpath("//*[@class='rg_bx rg_di rg_el ivg-i'][@data-ri='0']");
+				WebElement firstImageLink = waitAndGetWebElement(driver, byFirstImageLink);
+				firstImageLink.click();
+
+				By byVisitLink = By.xpath("//a[@class='irc_vpl i3599 irc_lth'][@tabindex=0]");
+				WebElement visitLink = waitAndGetWebElement(driver, byVisitLink);
+				visitLink.click();  // page is opened in a separate browser tab
+				// TODO: 2019-05-14 add wait for page to load (periodically fails with org.openqa.selenium.WebDriverException: no such execution context)
+
+				Set<String> handles = driver.getWindowHandles();
+				ArrayList<String> handlsList = new ArrayList<>(handles);
+				String newTab = handlsList.get(handlsList.size() - 1);
+				driver.switchTo().window(newTab);
+				(new WebDriverWait(driver, 5))
+						.until(ExpectedConditions.urlToBe("https://www.seleniumhq.org/"));
+				String tabUrl = driver.getCurrentUrl();
+				Assert.assertTrue(tabUrl.startsWith("https://www.seleniumhq.org/"), "");
+
 	}
 
 	@AfterMethod
