@@ -7,6 +7,7 @@ import by.it.okoyro.pages.SearchResultPageFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,12 +23,9 @@ public class ExpediaTest {
 		// headless mode is required to run tests in docker container
 		ChromeDriverService service =
 		    new ChromeDriverService.Builder().withWhitelistedIps("").withVerbose(true).build();
-		//WebDriver driver =
-//		ChromeOptions chromeOptions = new ChromeOptions();
-//		chromeOptions.setHeadless(true);
-//		chromeOptions.addArguments("--verbose");
-//		chromeOptions.addArguments("--whitelisted-ips=''");
-		driver = new ChromeDriver(service);
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setHeadless(true);
+		driver = new ChromeDriver(service, chromeOptions);
 	}
 
 	@Test
