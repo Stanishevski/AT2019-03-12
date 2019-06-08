@@ -3,6 +3,9 @@ package by.it.okoyro.tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,6 +24,14 @@ public class Util {
 		(new WebDriverWait(driver, 10))
 				.until(ExpectedConditions.presenceOfElementLocated(queryLocator));
 		return driver.findElements(queryLocator);
+	}
+
+	public static ChromeDriver buildChromeDriver() {
+		ChromeDriverService service =
+				new ChromeDriverService.Builder().withWhitelistedIps("").build();
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setHeadless(System.getProperty("headless") != null);
+		return new ChromeDriver(service, chromeOptions);
 	}
 
 	public static void shortWait(WebDriver driver) {
