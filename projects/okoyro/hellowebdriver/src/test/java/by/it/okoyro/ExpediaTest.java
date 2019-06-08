@@ -19,8 +19,11 @@ public class ExpediaTest {
 
 	@BeforeMethod
 	public void setUp() {
+		// headless mode is required to run tests in docker container
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.setHeadless(true);
+		chromeOptions.addArguments("--verbose");
+		chromeOptions.addArguments("--whitelisted-ips=''");
 		driver = new ChromeDriver(chromeOptions);
 	}
 
