@@ -19,7 +19,6 @@ public class ExpediaTest {
 
 	@BeforeMethod
 	public void setUp() {
-		//		System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.setHeadless(true);
 		driver = new ChromeDriver(chromeOptions);
@@ -41,7 +40,7 @@ public class ExpediaTest {
 		Assert.assertTrue(searchResultsQuantity > 1);
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void taskB() {
 		driver.get("https://www.expedia.com.my/");
 
