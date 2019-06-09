@@ -3,6 +3,7 @@ package by.it.okoyro.pages;
 import by.it.okoyro.tools.Util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,10 +24,7 @@ public class HomePage {
 	private By searchButton = By.cssSelector("section#section-flight-tab-hp button[type='submit']");
 	private By departureDateInput = By.id("flight-departing-single-hp-flight");
 	private By firstOption = By.id("aria-option-0");
-	private By returningDateInput = By.id("flight-returning-hp-flight");
-	private By flightTitle = By.className("title-city-text");
 	private By closeDatepickerButton = By.className("datepicker-close-btn");
-
 
 	// App Behaviour
 
@@ -45,7 +43,8 @@ public class HomePage {
 		Util.shortWait(driver);
 		Util.find(driver, flightInputFrom).sendKeys(destinationFrom);
 		Util.shortWait(driver);
-		Util.find(driver, firstOption).click();
+		WebElement dropDawnValue = Util.find(driver, firstOption);
+		dropDawnValue.click();
 		return this;
 	}
 
@@ -54,7 +53,8 @@ public class HomePage {
 		Util.shortWait(driver);
 		Util.find(driver, flightInputTo).sendKeys(destinationTo);
 		Util.shortWait(driver);
-		Util.find(driver, firstOption).click();
+		WebElement dropDownValue = Util.find(driver, firstOption);
+		dropDownValue.click();
 		return this;
 	}
 
