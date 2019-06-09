@@ -1,6 +1,7 @@
 package by.it.okoyro.pages;
 
 import by.it.okoyro.tools.Util;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,7 +29,7 @@ public class HomePageFactory {
 	@FindBy(id = "aria-option-0")
 	private WebElement firstOption;
 
-	@FindBy(id = "flight-departing-single-hp-flight")
+	@FindBy(id = "flight-departing-hp-flight")
 	private WebElement departureDateInput;
 
 	@FindBy(className = "datepicker-close-btn")
@@ -62,8 +63,6 @@ public class HomePageFactory {
 		flightInputTo.sendKeys(destinationTo);
 		Util.shortWait(driver);
 		firstOption.click();
-//		(new WebDriverWait(driver, 10))
-//						.until(ExpectedConditions.presenceOfElementLocated());
 		return this;
 	}
 
@@ -78,6 +77,8 @@ public class HomePageFactory {
 
 	public HomePageFactory setReturnDate(String date) {
 		returnDateInput.click();
+		returnDateInput.clear(); // it doesn't clear
+		returnDateInput.sendKeys(Keys.BACK_SPACE); // delete 1 symbol
 		Util.shortWait(driver);
 		returnDateInput.sendKeys(date);
 		closeDatepickerButton.click();
