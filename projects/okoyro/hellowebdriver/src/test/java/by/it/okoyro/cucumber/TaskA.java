@@ -2,19 +2,19 @@ package by.it.okoyro.cucumber;
 
 import by.it.okoyro.pages.HomePage;
 import by.it.okoyro.pages.SearchResultPage;
+import by.it.okoyro.tools.Util;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
 // simply copy/paste log with scenario (from When to Then) when BddAviaTest is run
-@Test (invocationCount = 5)
+@Test
 public class TaskA {
 
 	private WebDriver driver;
@@ -24,7 +24,7 @@ public class TaskA {
 
 	@Before
 	public void initTest() {
-		driver = new ChromeDriver();
+		driver = Util.buildChromeDriver();
 	}
 
 
