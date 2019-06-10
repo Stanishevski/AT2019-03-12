@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="hellowebdriver">
+    <test name="CheckFindImageGoogleSiteTest">
+        <classes>
+            <class name="by.it.stanishevski.CheckFindImageGoogleSiteTest"/>
+        </classes>
+    </test> <!-- CheckFindImageGoogleSiteTest -->
+
+
+    <test name="CheckGoogleSiteTest">
+        <classes>
+            <class name="by.it.stanishevski.CheckGoogleSiteTest"/>
+        </classes>
+    </test> <!-- CheckGoogleSiteTest -->
+
+    <test name="CheckSeleniumSiteTest">
+        <classes>
+            <class name="by.it.stanishevski.CheckSeleniumSiteTest"/>
+        </classes>
+    </test> <!-- CheckSeleniumSiteTest -->
+    <test name="ExpediaTest">
+        <classes>
+            <class name="by.it.stanishevski.ExpediaTest"/>
+        </classes>
+    </test> <!-- ExpediaTest -->
+
+
+</suite> <!-- hellowebdriver -->
