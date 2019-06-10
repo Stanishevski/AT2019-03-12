@@ -1,0 +1,337 @@
+Запущен по таймеру
+Running as SYSTEM
+Building in workspace C:\Jenkins\workspace\AT29TaskC-AT23XML
+No credentials specified
+ > C:\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Git\bin\git.exe config remote.origin.url https://github.com/Stanishevski/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/Stanishevski/AT2019-03-12.git
+ > C:\Git\bin\git.exe --version # timeout=10
+ > C:\Git\bin\git.exe fetch --tags --force --progress https://github.com/Stanishevski/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision ea5614fcb3726fcd0ea69359abde1814b277284c (refs/remotes/origin/master)
+ > C:\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Git\bin\git.exe checkout -f ea5614fcb3726fcd0ea69359abde1814b277284c
+Commit message: "Merge branch 'master' of https://github.com/Khmelov/AT2019-03-12"
+ > C:\Git\bin\git.exe rev-list --no-walk ea5614fcb3726fcd0ea69359abde1814b277284c # timeout=10
+[AT29TaskC-AT23XML] $ cmd.exe /C "C:\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven\bin\mvn.cmd -f C:\Jenkins\workspace\AT29TaskC-AT23XML\projects\stanishevski\hellowebdriver\pom.xml test -Dsurefire.suiteXmlFiles=projects/stanishevski/hellowebdriver/src/test/at23.xml && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< by.it.stanishevski:hellowebdriver >------------------
+[INFO] Building hellowebdriver 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Jenkins\workspace\AT29TaskC-AT23XML\projects\stanishevski\hellowebdriver\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ hellowebdriver ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to C:\Jenkins\workspace\AT29TaskC-AT23XML\projects\stanishevski\hellowebdriver\target\test-classes
+[WARNING] /C:/Jenkins/workspace/AT29TaskC-AT23XML/projects/stanishevski/hellowebdriver/src/test/java/by/it/stanishevski/CheckSeleniumSiteTest.java:[3,50] com.sun.org.apache.bcel.internal.classfile.LineNumber is internal proprietary API and may be removed in a future release
+[INFO]
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hellowebdriver ---
+[INFO] Surefire report directory: C:\Jenkins\workspace\AT29TaskC-AT23XML\projects\stanishevski\hellowebdriver\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Configuring TestNG with: TestNG652Configurator
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 3102
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560209412.521][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:30:14 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 33430
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560209434.063][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:30:35 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 4615
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560209440.696][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:30:41 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Element <artifactId>selenium-java</artifactId> OK
+Java Version: 3.141.59
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 22958
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560209449.936][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:30:50 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 17126
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560209502.187][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:31:43 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+
+2 Scenarios (2 passed)
+18 Steps (18 passed)
+1m46,064s
+
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 38879
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560209555.999][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:32:37 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 200.25 sec - in TestSuite
+
+Results :
+
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:22 min
+[INFO] Finished at: 2019-06-11T02:33:30+03:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
+
+
+
+
+Started by user Zhan-Olezhan
+Running as SYSTEM
+Building in workspace C:\Jenkins\workspace\AT29TaskC-AT24XML
+No credentials specified
+ > C:\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Git\bin\git.exe config remote.origin.url https://github.com/Stanishevski/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/Stanishevski/AT2019-03-12.git
+ > C:\Git\bin\git.exe --version # timeout=10
+ > C:\Git\bin\git.exe fetch --tags --force --progress https://github.com/Stanishevski/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision ea5614fcb3726fcd0ea69359abde1814b277284c (refs/remotes/origin/master)
+ > C:\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Git\bin\git.exe checkout -f ea5614fcb3726fcd0ea69359abde1814b277284c
+Commit message: "Merge branch 'master' of https://github.com/Khmelov/AT2019-03-12"
+ > C:\Git\bin\git.exe rev-list --no-walk ea5614fcb3726fcd0ea69359abde1814b277284c # timeout=10
+[AT29TaskC-AT24XML] $ cmd.exe /C "C:\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven\bin\mvn.cmd -f C:\Jenkins\workspace\AT29TaskC-AT24XML\projects\stanishevski\hellowebdriver\pom.xml test -Dsurefire.suiteXmlFiles=projects/stanishevski/hellowebdriver/src/test/at24.xml && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< by.it.stanishevski:hellowebdriver >------------------
+[INFO] Building hellowebdriver 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Jenkins\workspace\AT29TaskC-AT24XML\projects\stanishevski\hellowebdriver\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Jenkins\workspace\AT29TaskC-AT24XML\projects\stanishevski\hellowebdriver\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to C:\Jenkins\workspace\AT29TaskC-AT24XML\projects\stanishevski\hellowebdriver\target\test-classes
+[WARNING] /C:/Jenkins/workspace/AT29TaskC-AT24XML/projects/stanishevski/hellowebdriver/src/test/java/by/it/stanishevski/CheckSeleniumSiteTest.java:[3,50] com.sun.org.apache.bcel.internal.classfile.LineNumber is internal proprietary API and may be removed in a future release
+[INFO]
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hellowebdriver ---
+[INFO] Surefire report directory: C:\Jenkins\workspace\AT29TaskC-AT24XML\projects\stanishevski\hellowebdriver\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Configuring TestNG with: TestNG652Configurator
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 37624
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210176.910][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:42:59 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 23070
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210213.339][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:43:34 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 8758
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210218.534][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:43:39 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Element <artifactId>selenium-java</artifactId> OK
+Java Version: 3.141.59
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 29139
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210227.226][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:43:48 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 2868
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210284.030][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:44:45 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+
+2 Scenarios (2 passed)
+18 Steps (18 passed)
+1m49,865s
+
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 5342
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210337.197][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:45:38 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 215.652 sec - in TestSuite
+
+Results :
+
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:38 min
+[INFO] Finished at: 2019-06-11T02:46:28+03:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
+
+
+
+
+
+Started by user Zhan-Olezhan
+Running as SYSTEM
+Building in workspace C:\Jenkins\workspace\AT29TaskC-AT28XML
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Stanishevski/AT2019-03-12.git
+ > C:\Git\bin\git.exe init C:\Jenkins\workspace\AT29TaskC-AT28XML # timeout=10
+Fetching upstream changes from https://github.com/Stanishevski/AT2019-03-12.git
+ > C:\Git\bin\git.exe --version # timeout=10
+ > C:\Git\bin\git.exe fetch --tags --force --progress https://github.com/Stanishevski/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\bin\git.exe config remote.origin.url https://github.com/Stanishevski/AT2019-03-12.git # timeout=10
+ > C:\Git\bin\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Git\bin\git.exe config remote.origin.url https://github.com/Stanishevski/AT2019-03-12.git # timeout=10
+Fetching upstream changes from https://github.com/Stanishevski/AT2019-03-12.git
+ > C:\Git\bin\git.exe fetch --tags --force --progress https://github.com/Stanishevski/AT2019-03-12.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision ea5614fcb3726fcd0ea69359abde1814b277284c (refs/remotes/origin/master)
+ > C:\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Git\bin\git.exe checkout -f ea5614fcb3726fcd0ea69359abde1814b277284c
+Commit message: "Merge branch 'master' of https://github.com/Khmelov/AT2019-03-12"
+First time build. Skipping changelog.
+[AT29TaskC-AT28XML] $ cmd.exe /C "C:\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven\bin\mvn.cmd -f C:\Jenkins\workspace\AT29TaskC-AT28XML\projects\stanishevski\hellowebdriver\pom.xml test -Dsurefire.suiteXmlFiles=projects/stanishevski/hellowebdriver/src/test/at28.xml && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< by.it.stanishevski:hellowebdriver >------------------
+[INFO] Building hellowebdriver 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Jenkins\workspace\AT29TaskC-AT28XML\projects\stanishevski\hellowebdriver\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Jenkins\workspace\AT29TaskC-AT28XML\projects\stanishevski\hellowebdriver\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hellowebdriver ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ hellowebdriver ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to C:\Jenkins\workspace\AT29TaskC-AT28XML\projects\stanishevski\hellowebdriver\target\test-classes
+[WARNING] /C:/Jenkins/workspace/AT29TaskC-AT28XML/projects/stanishevski/hellowebdriver/src/test/java/by/it/stanishevski/CheckSeleniumSiteTest.java:[3,50] com.sun.org.apache.bcel.internal.classfile.LineNumber is internal proprietary API and may be removed in a future release
+[INFO]
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ hellowebdriver ---
+[INFO] Surefire report directory: C:\Jenkins\workspace\AT29TaskC-AT28XML\projects\stanishevski\hellowebdriver\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Configuring TestNG with: TestNG652Configurator
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 19465
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210493.953][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:48:14 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 35591
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210515.720][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:48:36 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 8049
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210522.114][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:48:43 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Element <artifactId>selenium-java</artifactId> OK
+Java Version: 3.141.59
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 2772
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210531.444][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:48:52 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 20301
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210582.857][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:49:43 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+
+2 Scenarios (2 passed)
+18 Steps (18 passed)
+1m44,472s
+
+Starting ChromeDriver 74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}) on port 7173
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1560210635.942][WARNING]: This version of ChromeDriver has not been tested with Chrome version 75.
+июн 11, 2019 2:50:36 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 198.945 sec - in TestSuite
+
+Results :
+
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:23 min
+[INFO] Finished at: 2019-06-11T02:51:30+03:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
