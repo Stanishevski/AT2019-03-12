@@ -1,10 +1,8 @@
 package by.it.okoyro.pages;
 
+import by.it.okoyro.tools.Util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class SearchResultPage {
 
@@ -16,9 +14,7 @@ public class SearchResultPage {
 	}
 
 	public int countSearchResults() {
-		List<WebElement> searchResults = driver.findElements(foundedFlight);
-		int searchResultsQuantity = searchResults.size();
+		int searchResultsQuantity = Util.findAll(driver, foundedFlight).size();
 		return searchResultsQuantity;
-
 	}
 }
